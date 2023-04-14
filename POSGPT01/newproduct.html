@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nuevo producto</title>
+    <link rel="stylesheet" type="text/css" href="newproduct.css">
+    <script src="newproduct.js"></script>
+</head>
+
+<body>
+    <h1>Nuevo producto</h1>
+    <form id="product-form">
+        <!-- SKU -->
+        <label for="sku">SKU:</label>
+        <input type="number" id="sku" name="sku" pattern="[0-9]+" required>
+
+        <!-- TITLE -->
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <!-- STOCK -->
+        <label for="stock">Existencia:</label>
+        <input type="number" id="stock" name="stock" pattern="[0-9]+" required>
+
+        <!-- COLORS -->
+        <fieldset class="outter-color-field">
+            <legend>Colores:</legend>
+            <div class="row">
+                <div class="column">
+                    <div class="color-container">
+                        <input type="checkbox" id="color1" name="color1" value="rosa">
+                        <label for="color1">Rosa</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color2" name="color2" value="azul">
+                        <label for="color2">Azul</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color3" name="color3" value="amarillo">
+                        <label for="color3">Amarillo</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color4" name="color4" value="rojo">
+                        <label for="color4">Rojo</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color5" name="color5" value="morado">
+                        <label for="color5">Morado</label>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="color-container">
+                        <input type="checkbox" id="color6" name="color6" value="verde">
+                        <label for="color6">Verde</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color7" name="color7" value="naranja">
+                        <label for="color7">Naranja</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color8" name="color8" value="negro">
+                        <label for="color8">Negro</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color9" name="color9" value="blanco">
+                        <label for="color9">Blanco</label>
+                    </div>
+                    <div class="color-container">
+                        <input type="checkbox" id="color10" name="color10" value="gris">
+                        <label for="color10">Gris</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- SEX-->
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="unisex">Unisex</option>
+            <option value="nino">Niño</option>
+            <option value="nina">Niña</option>
+        </select>
+
+        <!-- SIZE -->
+        <label for="talla">Talla:</label>
+        <select id="talla" name="talla" required>
+            <option value="0m">0m</option>
+            <option value="3m">3m</option>
+            <option value="6m">6m</option>
+            <option value="1a">1 año</option>
+            <option value="2a">2 años</option>
+            <option value="3a">3 años</option>
+        </select>
+
+        <!-- LINE -->
+        <label for="linea">Línea:</label>
+        <select id="linea" name="linea">
+            <option value="linea_bebe">Línea Bebé</option>
+            <option value="linea_infantil">Línea Infantil</option>
+        </select>
+
+        <!-- CATEGORY -->
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">Categoría</option>
+            <option value="set de 1 pieza">set de 1 pieza</option>
+            <option value="set de 2 piezas">set de 2 piezas</option>
+            <option value="mamelucos">mamelucos</option>
+            <option value="toallas">toallas</option>
+            <option value="vestidos">vestidos</option>
+        </select>
+
+        <!-- REGULAR PRICE -->
+        <label>Precio:</label>
+        <div class="precio-container">
+            <!-- REG PRICE WHOLE NUMBER-->
+            <input type="number" id="reg-price-whole-number" name="reg-price-whole-number" min="1" max="9999" required>
+            <!-- : -->
+            <span>.</span>
+            <!-- REG PRICE DECIMAL NUMBER-->
+            <input type="number" id="reg-price-decimal-number" name="reg-price-decimal-number" min="1" max="9999" required>
+        </div>
+
+        <!-- SEASON -->
+        <label for="temporada">Temporada:</label>
+        <select id="temporada" name="temporada" required>
+            <option value="primavera-verano">Primavera-Verano</option>
+            <option value="otono-invierno">Otoño-Invierno</option>
+        </select>
+
+        <!-- SALE PRICE -->
+        <label>Precio de oferta:</label>
+        <div class="precio-container">
+            <!-- SALE PRICE WHOLE NUMBER -->
+            <input type="number" id="sale-price-whole-number" name="sale-price-whole-number" min="1" max="9999">
+            <!-- : -->
+            <span>.</span>
+            <!-- SALE PRICE DECIMAL NUMBER -->
+            <input type="number" id="sale-price-decimal-number" name="sale-price-decimal-number" min="1" max="99">
+        </div>
+
+        <!-- SALE STARTING DATE -->
+        <label for="start-date">Fecha inicial de oferta:</label>
+        <input type="date" id="start-date" name="start-date">
+
+        <!-- SALE ENDING DATE -->
+        <label for="end-date">Fecha final de oferta:</label>
+        <input type="date" id="end-date" name="end-date">
+
+        <!-- UPLOAD IMAGES -->
+        <!-- <label for="image-upload">Selecciona imágenes:</label>
+        <input type="file" id="image-upload" name="image-upload" accept="image/*" multiple>
+        <input type="submit" value="Subir imagen"> -->
+        <label for="images">Imágenes (String dummy):</label>
+        <input type="text" id="images" name="images">
+
+        <!-- SUBMIT AND CANCEL BUTTONS -->
+        <div class="button-group">
+            <button type="submit">Listo</button>
+            <button type="cancel" onclick="window.location.href='inventory.html'">Cancelar</button>
+        </div>
+    </form>
+    <button id="fill-form-btn">Fill Form</button>
+</body>
+
+</html>
+
+<!-- ... -->
